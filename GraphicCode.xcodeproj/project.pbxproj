@@ -15,6 +15,17 @@
 		CF317A092153A53B003094B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF317A082153A53B003094B3 /* main.m */; };
 		CF317A132153A53B003094B3 /* GraphicCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF317A122153A53B003094B3 /* GraphicCodeTests.m */; };
 		CF317A1E2153A53C003094B3 /* GraphicCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF317A1D2153A53C003094B3 /* GraphicCodeUITests.m */; };
+		CF8B42B72153A8CF0052CA6C /* NHGraphCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B42B62153A8CF0052CA6C /* NHGraphCoder.m */; };
+		CF8B42BB2153E6950052CA6C /* JGAFImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B42BA2153E6950052CA6C /* JGAFImageCache.m */; };
+		CF8B42C32153E69C0052CA6C /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B42C12153E69C0052CA6C /* FBShimmeringLayer.m */; };
+		CF8B42C42153E69C0052CA6C /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8B42C22153E69C0052CA6C /* FBShimmeringView.m */; };
+		CF8B42CC2153E6AA0052CA6C /* coder_default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF8B42C52153E6A90052CA6C /* coder_default.jpg */; };
+		CF8B42CD2153E6AA0052CA6C /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8B42C62153E6A90052CA6C /* error.png */; };
+		CF8B42CE2153E6AA0052CA6C /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8B42C72153E6AA0052CA6C /* success.png */; };
+		CF8B42CF2153E6AA0052CA6C /* error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8B42C82153E6AA0052CA6C /* error@2x.png */; };
+		CF8B42D02153E6AA0052CA6C /* error@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8B42C92153E6AA0052CA6C /* error@3x.png */; };
+		CF8B42D12153E6AA0052CA6C /* success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8B42CA2153E6AA0052CA6C /* success@2x.png */; };
+		CF8B42D22153E6AA0052CA6C /* success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CF8B42CB2153E6AA0052CA6C /* success@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +62,23 @@
 		CF317A192153A53B003094B3 /* GraphicCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GraphicCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF317A1D2153A53C003094B3 /* GraphicCodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GraphicCodeUITests.m; sourceTree = "<group>"; };
 		CF317A1F2153A53C003094B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF8B42B52153A8CF0052CA6C /* NHGraphCoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NHGraphCoder.h; sourceTree = "<group>"; };
+		CF8B42B62153A8CF0052CA6C /* NHGraphCoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NHGraphCoder.m; sourceTree = "<group>"; };
+		CF8B42B92153E6950052CA6C /* JGAFImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGAFImageCache.h; sourceTree = "<group>"; };
+		CF8B42BA2153E6950052CA6C /* JGAFImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGAFImageCache.m; sourceTree = "<group>"; };
+		CF8B42BD2153E69C0052CA6C /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
+		CF8B42BE2153E69C0052CA6C /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringLayer.h; sourceTree = "<group>"; };
+		CF8B42BF2153E69C0052CA6C /* FBShimmering-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBShimmering-Prefix.pch"; sourceTree = "<group>"; };
+		CF8B42C02153E69C0052CA6C /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
+		CF8B42C12153E69C0052CA6C /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
+		CF8B42C22153E69C0052CA6C /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
+		CF8B42C52153E6A90052CA6C /* coder_default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coder_default.jpg; sourceTree = "<group>"; };
+		CF8B42C62153E6A90052CA6C /* error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = error.png; sourceTree = "<group>"; };
+		CF8B42C72153E6AA0052CA6C /* success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = success.png; sourceTree = "<group>"; };
+		CF8B42C82153E6AA0052CA6C /* error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error@2x.png"; sourceTree = "<group>"; };
+		CF8B42C92153E6AA0052CA6C /* error@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "error@3x.png"; sourceTree = "<group>"; };
+		CF8B42CA2153E6AA0052CA6C /* success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "success@2x.png"; sourceTree = "<group>"; };
+		CF8B42CB2153E6AA0052CA6C /* success@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "success@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +129,7 @@
 		CF3179F82153A539003094B3 /* GraphicCode */ = {
 			isa = PBXGroup;
 			children = (
+				CF8B42B22153A7B50052CA6C /* Classes */,
 				CF3179F92153A539003094B3 /* AppDelegate.h */,
 				CF3179FA2153A539003094B3 /* AppDelegate.m */,
 				CF3179FC2153A539003094B3 /* ViewController.h */,
@@ -130,6 +159,62 @@
 				CF317A1F2153A53C003094B3 /* Info.plist */,
 			);
 			path = GraphicCodeUITests;
+			sourceTree = "<group>";
+		};
+		CF8B42B22153A7B50052CA6C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CF8B42B42153A7CF0052CA6C /* vendor */,
+				CF8B42B32153A7C20052CA6C /* Resources */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CF8B42B32153A7C20052CA6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CF8B42C52153E6A90052CA6C /* coder_default.jpg */,
+				CF8B42C62153E6A90052CA6C /* error.png */,
+				CF8B42C82153E6AA0052CA6C /* error@2x.png */,
+				CF8B42C92153E6AA0052CA6C /* error@3x.png */,
+				CF8B42C72153E6AA0052CA6C /* success.png */,
+				CF8B42CA2153E6AA0052CA6C /* success@2x.png */,
+				CF8B42CB2153E6AA0052CA6C /* success@3x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CF8B42B42153A7CF0052CA6C /* vendor */ = {
+			isa = PBXGroup;
+			children = (
+				CF8B42B52153A8CF0052CA6C /* NHGraphCoder.h */,
+				CF8B42B62153A8CF0052CA6C /* NHGraphCoder.m */,
+				CF8B42BC2153E69C0052CA6C /* FBShimmering */,
+				CF8B42B82153E6950052CA6C /* JGAFImageCache */,
+			);
+			path = vendor;
+			sourceTree = "<group>";
+		};
+		CF8B42B82153E6950052CA6C /* JGAFImageCache */ = {
+			isa = PBXGroup;
+			children = (
+				CF8B42B92153E6950052CA6C /* JGAFImageCache.h */,
+				CF8B42BA2153E6950052CA6C /* JGAFImageCache.m */,
+			);
+			path = JGAFImageCache;
+			sourceTree = "<group>";
+		};
+		CF8B42BC2153E69C0052CA6C /* FBShimmering */ = {
+			isa = PBXGroup;
+			children = (
+				CF8B42BD2153E69C0052CA6C /* FBShimmering.h */,
+				CF8B42BE2153E69C0052CA6C /* FBShimmeringLayer.h */,
+				CF8B42BF2153E69C0052CA6C /* FBShimmering-Prefix.pch */,
+				CF8B42C02153E69C0052CA6C /* FBShimmeringView.h */,
+				CF8B42C12153E69C0052CA6C /* FBShimmeringLayer.m */,
+				CF8B42C22153E69C0052CA6C /* FBShimmeringView.m */,
+			);
+			path = FBShimmering;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,8 +321,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF317A062153A53B003094B3 /* LaunchScreen.storyboard in Resources */,
+				CF8B42CE2153E6AA0052CA6C /* success.png in Resources */,
+				CF8B42CD2153E6AA0052CA6C /* error.png in Resources */,
+				CF8B42CC2153E6AA0052CA6C /* coder_default.jpg in Resources */,
+				CF8B42D02153E6AA0052CA6C /* error@3x.png in Resources */,
+				CF8B42D12153E6AA0052CA6C /* success@2x.png in Resources */,
 				CF317A032153A53B003094B3 /* Assets.xcassets in Resources */,
+				CF8B42D22153E6AA0052CA6C /* success@3x.png in Resources */,
 				CF317A012153A539003094B3 /* Main.storyboard in Resources */,
+				CF8B42CF2153E6AA0052CA6C /* error@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,8 +354,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF8B42C32153E69C0052CA6C /* FBShimmeringLayer.m in Sources */,
+				CF8B42BB2153E6950052CA6C /* JGAFImageCache.m in Sources */,
 				CF3179FE2153A539003094B3 /* ViewController.m in Sources */,
+				CF8B42C42153E69C0052CA6C /* FBShimmeringView.m in Sources */,
 				CF317A092153A53B003094B3 /* main.m in Sources */,
+				CF8B42B72153A8CF0052CA6C /* NHGraphCoder.m in Sources */,
 				CF3179FB2153A539003094B3 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +530,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78S8WECG83;
 				INFOPLIST_FILE = GraphicCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +547,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 78S8WECG83;
 				INFOPLIST_FILE = GraphicCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
