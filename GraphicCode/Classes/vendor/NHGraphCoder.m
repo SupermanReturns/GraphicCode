@@ -64,6 +64,59 @@ typedef void(^NHSliderEvent)(CGFloat p,BOOL end);
 
 @property(nonatomic, retain) UIColor *thumbTintColor;
 
+- (void)handleSliderValueChangedEvent:(NHSliderEvent)event;
+
+@end
+
+@interface NHGraphicSlider()
+
+@property (nonatomic, assign, getter=isContinuous) BOOL continuous;
+@property (nonatomic, assign) CGPoint thumbCenterPoint;
+
+@property (nonatomic, assign) BOOL sliderAbel,sliding;
+@property (nonatomic, strong) UISlider *slider;
+@property (nonatomic, strong) FBShimmeringView *shimmer;
+
+#pragma mark - Init and Setup methods
+- (void)setup;
+
+#pragma mark - Thumb management methods
+- (BOOL)isPointInThumb:(CGPoint)point;
+
+@end
+@implementation NHGraphicSlider
+
+@synthesize value=_value;
+
+-(void)setValue:(float)value{
+    if (value !=_value) {
+        if (value>self.maximumValue) {
+            value=self.maximumValue;
+        }
+        if (value<self.minimumValue) {
+            value=self.minimumValue;
+        }
+        _value=value;
+        [self setNeedsDisplay];
+        if (self.isContinuous) {
+            [self sendActionsForControlEvents:UIControlEventValueChanged];
+        }
+    }
+}
+@synthesize minimumValue=_minimumValue;
+-(void)setMinimumValue:(float)minimumValue{
+    if (minimumValue !=_minimumValue) {
+        _minimumValue = minimumValue;
+        if (self.maximumValue <self.minimumValue) {
+            self.maximumValue=self.minimumValue;
+        }
+        if (self.value<self.minimumValue) {
+            self.value=self.minimumValue;
+        }
+    }
+}
+@synthesize <#property#>
+
 @implementation NHGraphCoder
 
 /*
