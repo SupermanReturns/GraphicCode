@@ -115,7 +115,22 @@ typedef void(^NHSliderEvent)(CGFloat p,BOOL end);
         }
     }
 }
-@synthesize <#property#>
+@synthesize maximumValue=_maximumValue;
+-(void)setMaximumValue:(float)maximumValue{
+    if (maximumValue!=_maximumValue) {
+        _maximumValue=maximumValue;
+        if (self.minimumValue>self.maximumValue) {
+            self.minimumValue=self.maximumValue;
+        }
+        if (self.value>self.maximumValue ) {
+            self.value=self.maximumValue;
+        }
+    }
+}
+@synthesize minimumTrackTintColor=_minimumTrackTintColor;
+-(void)setMinimumTrackTintColor:(UIColor *)minimumTrackTintColor{
+     
+}
 
 @implementation NHGraphCoder
 
