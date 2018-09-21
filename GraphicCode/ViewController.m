@@ -20,8 +20,6 @@
     // Do any additional setup after loading the view, typically from a nib.
     CGSize size = self.view.bounds.size;
     
-
-    
     //network image to detect
     NSString *url = @"http://pic.pimg.tw/loloto/1357207442-1350656755_l.jpg?v=1357207447";
     NHGraphCoder *coder = [NHGraphCoder codeWithURL:url];

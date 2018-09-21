@@ -148,6 +148,8 @@ typedef void(^NHSliderEvent)(CGFloat p,BOOL end);
         [self setNeedsDisplay];
     }
 }
+@synthesize continuous = _continuous;
+
 @synthesize  thumbCenterPoint = _thumbCenterPoint;
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
@@ -231,7 +233,7 @@ typedef void(^NHSliderEvent)(CGFloat p,BOOL end);
 }
 -(void)sliderUp:(UISlider *)sender{
     if (_slider) {
-        _slider = NO;
+        _sliding = NO;
         if (_event) {
             _event(sender.value,true);
         }
