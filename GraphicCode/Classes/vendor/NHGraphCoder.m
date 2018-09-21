@@ -148,6 +148,124 @@ typedef void(^NHSliderEvent)(CGFloat p,BOOL end);
         [self setNeedsDisplay];
     }
 }
+@synthesize  thumbCenterPoint = _thumbCenterPoint;
+-(instancetype)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
+- (void)awakeFromNib {
+    [self setup];
+}
+-(void)setup{
+    self.sliderAbel = true;
+    self.value = 0.0;
+    self.minimumValue = 0;
+    self.maximumValue=1;
+    self.minimumTrackTintColor = [UIColor blueColor];
+    self.maximumTrackTintColor = [UIColor whiteColor];
+    self.thumbTintColor= [UIColor darkGrayColor];
+    self.continuous = YES;
+    self.thumbCenterPoint = CGPointZero;
+    
+    self.backgroundColor = [UIColor lightGrayColor];
+    UIImage *thumbImage = [self thumbWithColor:[UIColor colorWithRed:200.0/255.0 green:200.0/255.0 blue:200.0/255.0 alpha:1.0]];
+    _slider = [[UISlider alloc]initWithFrame:self.bounds];
+    _slider.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    CGPoint ctr  = _slider.center;
+    CGRect sliderFrame = _slider.frame;
+    sliderFrame.size.width-=4;
+    _slider.frame = sliderFrame;
+    _slider.center = ctr;
+    _slider.backgroundColor = [UIColor clearColor];
+    [_slider setThumbImage:thumbImage forState:UIControlStateNormal];
+    
+    UIImage *clearImage = [self clearPixel];
+    [_slider setMaximumTrackImage:clearImage forState:UIControlStateNormal];
+    [_slider setMinimumTrackImage:clearImage forState:UIControlStateNormal];
+    
+    _slider.minimumValue = 0;
+    _slider.maximumValue=1;
+    _slider.continuous = YES;
+    _slider.value = 0;
+    [self addSubview:_slider];
+    
+    CGSize thumbSize = thumbImage.size;
+    CGFloat infoStart_x = thumbSize.width;
+    CGRect bounds = CGRectMake(infoStart_x,0,CGRectGetWidth(self.bounds)-infoStart_x,CGRectGetHeight(self.bounds));
+    UILabel *infoLabel= [[UILabel alloc]initWithFrame:bounds];
+    infoLabel.textColor = [UIColor whiteColor];
+    infoLabel.textAlignment = NSTextAlignmentCenter;
+    infoLabel.backgroundColor = [UIColor clearColor];
+    infoLabel.font =[UIFont boldSystemFontOfSize:20];
+    infoLabel.text = @"拖动滑块完成验证>>>";
+    infoLabel.adjustsFontSizeToFitWidth =true;
+    
+    FBShimmeringView *shimmer =[[FBShimmeringView alloc]initWithFrame:bounds];
+    shimmer.shimmering = true;
+    shimmer.shimmeringBeginFadeDuration  =1.5;
+    shimmer.shimmeringOpacity = 0.3;
+    shimmer.contentView = infoLabel;
+    [self addSubview:shimmer];
+    self.shimmer = shimmer;
+    
+    [_slider addTarget:self action:@selector(sliderUp:) forControlEvents:UIControlEventTouchUpInside];
+    [_slider addTarget:self
+                action:@selector(sliderUp:)
+      forControlEvents:UIControlEventTouchUpOutside];
+    [_slider addTarget:self
+                action:@selector(sliderDown:)
+      forControlEvents:UIControlEventTouchDown];
+    [_slider addTarget:self
+                action:@selector(sliderChanged:)
+      forControlEvents:UIControlEventValueChanged];
+}
+-(void)resetSlider{
+    [_slider setValue:0 animated:YES];
+    self.shimmer.alpha =1;
+    if (_event) {
+        _event(0,false);
+    }
+}
+-(void)sliderUp:(UISlider *)sender{
+    if (_slider) {
+        _slider = NO;
+        if (_event) {
+            _event(sender.value,true);
+        }
+    }
+}
+- (void) sliderDown:(UISlider *)sender {
+    if (!_slider) {
+        
+    }
+    _sliding = YES;
+}
+- (void) sliderChanged:(UISlider *)sender {
+    self.shimmer.alpha  = MAX(0, 1 - (_slider.value *3.5));
+    if (_event) {
+        _event(sender.value,false);
+    }
+}
+- (UIImage *) thumbWithColor:(UIColor*)color {
+    CGFloat scale =[UIScreen mainScreen].scale;
+    if (scale<1.0) {
+        scale = 1.0;
+    }
+    
+    CGSize size = CGSizeMake(68*scale, 44*scale);
+    CGFloat radius  = 10*scale;
+    
+    UIGraphicsBeginImageContext(size);
+    
+    CGContextRef 
+}
+- (UIImage *) clearPixel {
+
+}
+
 @implementation NHGraphCoder
 
 /*
