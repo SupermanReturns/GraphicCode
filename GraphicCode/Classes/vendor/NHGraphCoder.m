@@ -129,9 +129,25 @@ typedef void(^NHSliderEvent)(CGFloat p,BOOL end);
 }
 @synthesize minimumTrackTintColor=_minimumTrackTintColor;
 -(void)setMinimumTrackTintColor:(UIColor *)minimumTrackTintColor{
-     
+    if (![minimumTrackTintColor isEqual:_minimumTrackTintColor]) {
+        _minimumTrackTintColor=minimumTrackTintColor;
+        [self setNeedsDisplay];
+    }
 }
-
+@synthesize maximumTrackTintColor = _maximumTrackTintColor;
+-(void)setMaximumTrackTintColor:(UIColor *)maximumTrackTintColor{
+    if (![maximumTrackTintColor isEqual:_maximumTrackTintColor]) {
+        _maximumTrackTintColor = maximumTrackTintColor;
+        [self setNeedsDisplay];
+    }
+}
+@synthesize thumbTintColor = _thumbTintColor;
+-(void)setThumbTintColor:(UIColor *)thumbTintColor{
+    if (![thumbTintColor isEqual:_thumbTintColor]) {
+        _thumbTintColor = thumbTintColor;
+        [self setNeedsDisplay];
+    }
+}
 @implementation NHGraphCoder
 
 /*
